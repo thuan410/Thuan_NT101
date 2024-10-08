@@ -1,5 +1,7 @@
+package vigenereCipher;
 import java.io.Console;
 import java.util.*;
+
 
 public class vigenere_cipher {
     public static List<Character> chars_list = new ArrayList<Character>();

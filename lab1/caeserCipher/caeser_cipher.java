@@ -99,9 +99,8 @@ public class caeser_cipher {
         System.out.println("****************************************");
         System.out.println("Select the algorithm you want to use");
         System.out.println("1. Caesar_Cipher");
-
-
-        
+    //  System.out.println("2. Playfair_Cipher");
+     // System.out.println("3. Vigenere_Cipher");
         System.out.println("0. Exit");
         System.out.println("****************************************");
     }
