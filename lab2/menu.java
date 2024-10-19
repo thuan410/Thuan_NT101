@@ -1,5 +1,6 @@
 import RSA.main;
 import java.util.Scanner;
+import Theory1.main1;
 
 public class menu {
     private static Scanner sc;
@@ -27,6 +28,12 @@ public class menu {
             printMENU();
             choice = sc.nextLine();
             switch (choice) {
+                case "0":
+                    System.out.println("Exiting...");
+                    return;
+                    case "1":
+                    main1.main();
+                    break;
                 case "4":
                     try {
                         main.main(); // Call the SimpleRSA main method

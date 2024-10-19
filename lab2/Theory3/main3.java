@@ -1,5 +1,5 @@
 package Theory3;
 
-public class main {
+public class main3 {
     
 }
