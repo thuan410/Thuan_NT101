@@ -52,7 +52,7 @@ public class main1 {
     }
 
     public static long Generate() {
-        System.out.print("Choose number of bits that you want to generate (8, 16, 64): ");
+        System.out.print("Chọn số bit bạn muốn tạo (8, 16, 64): ");
         int option = scan.nextInt();
         scan.nextLine();
 
@@ -75,7 +75,7 @@ public class main1 {
             maxValue = Long.MAX_VALUE;
         } else
         {
-            System.out.println("Invalid option!");
+            System.out.println("Tùy chọn không hợp lệ");
             return -1;
         }
 
@@ -103,7 +103,7 @@ public class main1 {
 
     public static boolean Check_Prime()
     {
-        System.out.print("Enter your arbitrary number (< 2^89 - 1): ");
+        System.out.print("Nhập số tùy ý của bạn (< 2^89 - 1):");
         BigInteger input = scan.nextBigInteger();
         System.out.println("Checking... ");
         // A prime number is greater than 1
@@ -124,7 +124,7 @@ public class main1 {
 
     public static void Biggest_Primes_Under_Mersenne()
     {
-        System.out.print("Enter Mersenne prime number(<= 2^89-1): ");
+        System.out.print("Nhập số nguyên tố Mersenne(<= 2^89-1):");
         long Mersenne_number = 0;
         try
         {
@@ -133,18 +133,18 @@ public class main1 {
         catch (InputMismatchException e)
         {
             //Xử lý trường hợp Mersenne_number lớn hơn 2 ^ 64 -1
-            System.out.println("This number is bigger than 2^64-1");
-            System.out.println("Here is the list of 10 prime numbers under the 10th Mersenne number (2^89-1)");
-            System.out.println("Prime found: 618970019642690137449562109");
-            System.out.println("Prime found: 618970019642690137449562101");
-            System.out.println("Prime found: 618970019642690137449562091");
-            System.out.println("Prime found: 618970019642690137449562081");
-            System.out.println("Prime found: 618970019642690137449562059");
-            System.out.println("Prime found: 618970019642690137449562057");
-            System.out.println("Prime found: 618970019642690137449562049");
-            System.out.println("Prime found: 618970019642690137449562021");
-            System.out.println("Prime found: 618970019642690137449562011");
-            System.out.println("Prime found: 618970019642690137449561999");
+            System.out.println("Số này lớn hơn 2 ^ 64-1");
+            System.out.println("Dưới đây là danh sách 10 số nguyên tố dưới số Mersenne thứ 10 (2^89-1)");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562109");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562101");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562091");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562081");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562059");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562057");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562049");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562021");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449562011");
+            System.out.println("Tìm thấy số nguyên tố: 618970019642690137449561999");
             return;
         }
 
@@ -153,7 +153,7 @@ public class main1 {
         ArrayList<Long> result = new ArrayList<Long>();
         if (!Is_Mersenne(Mersenne_number) || !Is_Prime(Mersenne_number))
         {
-            System.out.print("That is not a Mersenne prime number\n");
+            System.out.print("Đó không phải là số nguyên tố Mersennen\n");
             return ;
         }
         for(long i = Mersenne_number-1; i>1; i --)
@@ -161,7 +161,7 @@ public class main1 {
             if (Is_Prime(i))
             {
                 result.add(i);
-                System.out.println("Prime found: "+ i);
+                System.out.println("Tìm thấy số nguyên tố: "+ i);
                 if (result.size() > 9)
                 {
                     break;
@@ -176,7 +176,7 @@ public class main1 {
         long prime = Generate();
         if (prime != -1)
         {
-            System.out.println("Generated Prime: " + prime);
+            System.out.println("Tạo một số nguyên tố: " + prime);
         }
 
         //Tìm 10 số nguyên tố dưới số Mersenne (2 ^ 89-1 sẽ đợi lâu, sử dụng 2 ^ 61-1 để kiểm tra điều này)
