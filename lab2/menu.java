@@ -2,6 +2,7 @@ import RSA.main;
 import java.util.Scanner;
 import Theory1.main1;
 import Theory2.main2;
+import Theory3.main3;
 
 public class menu {
     private static Scanner sc;
@@ -37,6 +38,9 @@ public class menu {
                     break;
                 case "2":
                     main2.main();
+                    break;
+                case "3":
+                    main3.main();
                     break;
                 case "4":
                     try {
