@@ -1,6 +1,7 @@
 import RSA.main;
 import java.util.Scanner;
 import Theory1.main1;
+import Theory2.main2;
 
 public class menu {
     private static Scanner sc;
@@ -31,8 +32,11 @@ public class menu {
                 case "0":
                     System.out.println("Exiting...");
                     return;
-                    case "1":
+                case "1":
                     main1.main();
+                    break;
+                case "2":
+                    main2.main();
                     break;
                 case "4":
                     try {
