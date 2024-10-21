@@ -8,15 +8,15 @@ public class main3 {
         Scanner scan = new Scanner(System.in);
 
         // Input số a
-        System.out.print("Nhập cơ số (a): ");
+        System.out.print("Nhap co so (a): ");
         BigInteger a = new BigInteger(scan.nextLine());
 
         // Input số mũ x
-        System.out.print("Nhập số mũ (x): ");
+        System.out.print("Nhap so mu (x): ");
         BigInteger x = new BigInteger(scan.nextLine());
 
         // Input mô đum p
-        System.out.print("Nhập mô đun (p): ");
+        System.out.print("Nhap mo đun (p): ");
         BigInteger p = new BigInteger(scan.nextLine());
 
         // Tính a^x mod p
