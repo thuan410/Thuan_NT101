@@ -57,6 +57,42 @@ public class main {
             q = generateRandomPrime();
             e = generateRandomPrimeExponent();
         }
+        // Generate key pair
+        KeyPair keyPair = generateKeyPair(p, q, e);
+        PublicKey publicKey = keyPair.getPublic();
+        PrivateKey privateKey = keyPair.getPrivate();
+
+        // Output public and private keys
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        RSAPublicKeySpec publicKeySpec = keyFactory.getKeySpec(publicKey, RSAPublicKeySpec.class);
+        RSAPrivateKeySpec privateKeySpec = keyFactory.getKeySpec(privateKey, RSAPrivateKeySpec.class);
+
+        System.out.println("*********************");
+        System.out.println("Public Key: ");
+        System.out.println("Modulus: " + publicKeySpec.getModulus());
+        System.out.println("Exponent: " + publicKeySpec.getPublicExponent());
+
+        System.out.println("*********************");
+
+        System.out.println("Private Key: ");
+        System.out.println("Modulus: " + privateKeySpec.getModulus());
+        System.out.println("Exponent: " + privateKeySpec.getPrivateExponent());
+        System.out.println("*********************");
+
+        // Message to be encrypted
+        String message = "Hello RSA!";
+
+        // Encrypt the message
+        byte[] encryptedMessage = encrypt(message, publicKey);
+        // Encode the encrypted message to Base64
+        String encodedMessage = Base64.getEncoder().encodeToString(encryptedMessage);
+        System.out.println("Encrypted Message: " + encodedMessage);
+
+        // Decrypt the message
+        String decryptedMessage = decrypt(encryptedMessage, privateKey);
+        System.out.println("Decrypted Message: " + decryptedMessage);
+
+        scanner.close();
     }
 
     public static KeyPair generateKeyPair(BigInteger p, BigInteger q, BigInteger e) throws Exception {

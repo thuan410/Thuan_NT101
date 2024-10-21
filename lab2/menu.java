@@ -13,15 +13,15 @@ public class menu {
     public static void printMENU() {
         System.out.println("******************************************************************************");
         System.out.println("\t\tLAB2");
-        System.out.println("0\tThoát");
-        System.out.println("1\tC1.1.1. Tạo một số nguyên tố ngẫu nhiên");
-        System.out.println(" \t        Xác định 10 số nguyên tố lớn nhất dưới 10 Mersenn đầu tiên số nguyên tố");
-        System.out.println(" \t        Kiểm tra một số nguyên tố nhỏ hơn 2^89 - 1 có phải là số nguyên tố không");
-        System.out.println("2\tC1.1.2. Xác định ước chung lớn nhất của 2 lớn nguyên tố tùy ý");
-        System.out.println("3\tC1.1.3. Tính toán (a^x) mod p với (x > 40))");
+        System.out.println("0\tThoat");
+        System.out.println("1\tC1.1.1. Tao mot so nguyen to ngau nhien");
+        System.out.println(" \t        Xac dinh 10 so nguyen to lon nhat duoi 10 Mersenn đau tien so nguyen to");
+        System.out.println(" \t        Kiem tra mot so nguyen to nho hon 2^89 - 1 có phai la so nguyen to khong");
+        System.out.println("2\tC1.1.2. Xac dinh uoc chung lon nhat cua 2 lon nguyen to tuy y");
+        System.out.println("3\tC1.1.3. Tinh toan (a^x) mod p voi (x > 40))");
         System.out.println("4\tC2.2.   RSA");
         System.out.println("******************************************************************************");
-        System.out.println("Chọn số mà bạn muốn thực hiện nhiệm vụ (Nhập số): ");
+        System.out.println("Chon so ma ban muon thuc hien nhiem vu (Nhap so): ");
     }
 
     public static void Start() {
@@ -31,7 +31,7 @@ public class menu {
             choice = sc.nextLine();
             switch (choice) {
                 case "0":
-                    System.out.println("Exiting...");
+                    System.out.println("Dang tai...");
                     return;
                 case "1":
                     main1.main();
@@ -46,7 +46,7 @@ public class menu {
                     try {
                         main.main(); // Call the SimpleRSA main method
                     } catch (Exception e) {
-                        System.out.println("An error occurred: " + e.getMessage());
+                        System.out.println("1 loi : " + e.getMessage());
                         e.printStackTrace(); // Optional: Print the stack trace for debugging
                     }
             }
