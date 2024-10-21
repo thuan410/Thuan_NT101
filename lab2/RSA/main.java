@@ -15,16 +15,14 @@ import java.security.SecureRandom;
 public class main {
 
     public static void main() throws Exception {
-        System.out.println("Mã hóa RSA");
+        System.out.println("Ma hoa RSA");
         System.out.println("*********************");
-        System.out.println("Đây là tin nhắn cần được mã hóa: Xin chào RSA!");
-        System.out.println("*********************");
-        System.out.println("Khóa công khai được tạo ngẫu nhiên hoặc bạn có thể tự nhập chúng.");
+        System.out.println("Khoa cong khai đuoc tao ngau nhien hoac ban co the tu nhap chung.");
         System.out.println("*********************");
         Scanner scanner = new Scanner(System.in);
         String choose;
         do {
-            System.out.print("Vậy bạn muốn gì? Tự nhập hay Ngẫu nhiên? (nhập 'i' cho đầu vào, 'r' cho ngẫu nhiên)");
+            System.out.print("Vay ban muon gi? Tu nhap hay Ngau nhien? (nhap 'i' cho đau vao, 'r' cho ngau nhien)");
             choose = scanner.nextLine();
         }
         while(!choose.equals("i") && !choose.equals("r"));
@@ -32,25 +30,25 @@ public class main {
         BigInteger p, q, e;
         if (choose.equals("i")) {
             do {
-                System.out.print("Nhập số nguyên tố p (phải là số nguyên tố & có ít nhất 128 chữ số):");
+                System.out.print("Nhap so nguyen to p (phải la số nguyen to & co it nhat 128 chu so):");
                 p = new BigInteger(scanner.nextLine());
                 if (!p.isProbablePrime(10) || p.compareTo(new BigInteger("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")) <= 0) {
-                    System.out.println("p không phải là một số nguyên tố, hoặc nó không đủ lớn. Vui lòng nhập lại p.");
+                    System.out.println("p khong phai la mot so nguyen to, hoac no khong đu lon. Vui long nhap lai p.");
                 }
             } while (!p.isProbablePrime(10) || p.compareTo(new BigInteger("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")) <= 0);
 
             do {
-                System.out.print("Nhập số nguyên tố q (phải là số nguyên tố & có ít nhất 128 chữ số): ");
+                System.out.print("Nhap so nguyen to q (phai la so nguyen to & co it nhat 128 chu so): ");
                 q = new BigInteger(scanner.nextLine());
                 if (!q.isProbablePrime(10) || p.compareTo(new BigInteger("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")) <= 0) {
-                    System.out.println("q không phải là một số nguyên tố, hoặc nó không đủ lớn. Vui lòng nhập lại q.");
+                    System.out.println("q khong phai la mot so nguyen to, hoac no khong đu lon. Vui long nhap lai q.");
                 }
             } while (!q.isProbablePrime(10) || p.compareTo(new BigInteger("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")) <= 0);
             do {
-                System.out.print("Nhập số mũ công khai e (phải là số nguyên tố & có ít nhất 6 chữ số):");
+                System.out.print("Nhap so mu cong khai e (phai la so nguyen to & co it nhat 6 chu so):");
                 e = new BigInteger(scanner.nextLine());
                 if (!e.isProbablePrime(10) || p.compareTo(new BigInteger("100000")) <= 0) {
-                    System.out.println("e không phải là một số nguyên tố, hoặc nó không đủ lớn. Vui lòng nhập lại e.");
+                    System.out.println("e khong phai la mot so nguyen to, hoac no khong đu lon. Vui long nhap lai e.");
                 }
             } while (!e.isProbablePrime(10) || p.compareTo(new BigInteger("100000")) <= 0);
         }
