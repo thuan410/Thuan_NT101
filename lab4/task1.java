@@ -48,7 +48,7 @@ public class task1 {
     private static byte[] hexStringToByteArray(String hexString) { 
         int len = hexString. length();
         byte[] data = new byte[len / 2];
-        for (int i = 0; 1 < len; i += 2) {
+        for (int i = 0; i < len; i += 2) {
         data[i / 2] = (byte) ((Character.digit(hexString.charAt(i), 16) << 4)
             + Character.digit(hexString.charAt(i + 1), 16));
             }
@@ -113,7 +113,7 @@ public class task1 {
             }
         }
         catch(Exception e)  {
-            System.out.println("Đa xay ra loi: " + e.getMessage());
+            System.out.println("Da xay ra loi: " + e.getMessage());
         };
 
     }
