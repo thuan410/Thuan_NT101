@@ -42,6 +42,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            btn_exit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSteps).BeginInit();
             SuspendLayout();
             // 
@@ -173,11 +174,22 @@
             Column3.ReadOnly = true;
             Column3.Width = 125;
             // 
+            // btn_exit
+            // 
+            btn_exit.Location = new Point(439, 420);
+            btn_exit.Name = "btn_exit";
+            btn_exit.Size = new Size(94, 29);
+            btn_exit.TabIndex = 11;
+            btn_exit.Text = "Exit";
+            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.Click += btn_exit_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(545, 472);
+            Controls.Add(btn_exit);
             Controls.Add(dataGridViewSteps);
             Controls.Add(btnGenerateTable);
             Controls.Add(txtCipherTable);
@@ -191,7 +203,7 @@
             Controls.Add(btnEncode);
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
-            Text = "PlayFair Cipher";
+            Text = "PlayFair Cipher1";
             ((System.ComponentModel.ISupportInitialize)dataGridViewSteps).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -213,5 +225,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Button btn_exit;
     }
 }

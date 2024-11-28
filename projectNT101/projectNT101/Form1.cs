@@ -92,7 +92,7 @@ namespace projectNT101
                 return;
             }
 
-           
+
             try
             {
                 // Xóa dữ liệu cũ của DataGridView
@@ -325,7 +325,8 @@ namespace projectNT101
             }
         }
 
-        private string GenerateCipherTable2(string keyword) {
+        private string GenerateCipherTable2(string keyword)
+        {
             string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"; // Loại J
             keyword = keyword.ToUpper().Replace("J", "I");
 
@@ -364,6 +365,11 @@ namespace projectNT101
             return result.ToString();
         }
 
-
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            
+        }
     }
 }

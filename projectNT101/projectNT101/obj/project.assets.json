@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thuan\\source\\repos\\projectNT101\\projectNT101\\projectNT101.csproj",
+      "projectUniqueName": "D:\\Study\\SEMERTES_5\\NT101\\TH\\Thuan_NT101\\projectNT101\\projectNT101\\projectNT101.csproj",
       "projectName": "projectNT101",
-      "projectPath": "C:\\Users\\Thuan\\source\\repos\\projectNT101\\projectNT101\\projectNT101.csproj",
+      "projectPath": "D:\\Study\\SEMERTES_5\\NT101\\TH\\Thuan_NT101\\projectNT101\\projectNT101\\projectNT101.csproj",
       "packagesPath": "C:\\Users\\Thuan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thuan\\source\\repos\\projectNT101\\projectNT101\\obj\\",
+      "outputPath": "D:\\Study\\SEMERTES_5\\NT101\\TH\\Thuan_NT101\\projectNT101\\projectNT101\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
